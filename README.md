@@ -1,4 +1,4 @@
-# EVA4 Assignment 13 - Praveen Raghuvanshi
+# EVA4 Assignment 13 - Tusharkanta Biswal
 
 **Team Members**
 
@@ -7,7 +7,7 @@
 - Harsha Vardhan (harshavardhan.ma@gmail.com)
 - Praveen Raghuvanshi (praveenraghuvanshi@gmail.com)
 
-[Github Directory - Assignment -13](https://github.com/praveenraghuvanshi1512/EVA4/tree/Session-13/Session-13/Assignment-13)
+[Github Directory - Assignment -13](https://github.com/tusharkanta/EVA4-S13-YoloV3.0/)
 
 ### Assignment 13-1
 
@@ -21,23 +21,17 @@ OpenCV Yolo: [SOURCE (https://pysource.com/2019/06/27/yolo-object-detection-usin
 
 #### Solution
 
-- [Github Directory - Assignment-13-1](https://github.com/praveenraghuvanshi1512/EVA4/tree/Session-13/Session-13/Assignment-13/Assignment-13-1)
+- [Github Directory - Assignment-13-1](https://github.com/tusharkanta/ML_DL/tree/eva/S13)
 
-- [Notebook - EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb](https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb)
+- [Notebook - EVA-4-S13-A13-1-Tusharkanta_Biswal.ipynb](https://github.com/tusharkanta/ML_DL/blob/eva/S13/EVA-4-S13-A13-1-Tusharkanta_Biswal.ipynb)
 
 - Original Image
 
-  <img src=".\Assignment-13-1\praveen-cup.jpg" alt="Original Image - Praveen with Cup in hand" style="zoom:60%;" />
+  <img src="https://github.com/tusharkanta/ML_DL/blob/eva/S13/tushar_with_apple.jpg" alt="Original Image - Tushar with apple in hand" style="zoom:60%;" />
 
 - Objects Detected in Image
 
-  <img src=".\Assignment-13-1\praveen-cup-predicted.jpg" alt="Object Detected - Person and Cake" style="zoom:100%;" />
-
-- **Submission**
-
-  - Upload the link to GitHub implementation of this : https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb
-
-  - Upload the annotated image by YOLO : https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/praveen-cup-predicted.png
+  <img src="https://github.com/tusharkanta/ML_DL/blob/eva/S13/tushar_with_apple_predicted.jpg" alt="Object Detected - Person and Apple" style="zoom:100%;" />
 
 
 
@@ -95,13 +89,13 @@ Training Custom Dataset on Colab for YoloV3
   
 - Resources
   - Dataset
-    - [Images](Assignment-13-2/dataset/fulldataset/images)
-    - [Labels](Assignment-13-2/dataset/fulldataset/labels)
+    - [Images](https://github.com/tusharkanta/EVA-S13-YoloV3.0/tree/master/data/customdata/images)
+    - [Labels](https://github.com/tusharkanta/EVA-S13-YoloV3.0/tree/master/data/customdata/labels)
   - Custom YoloV3 code repository
   - Sample True Bounding Box
   - Sample Predicted Bounding Box
   - [Youtube Video (Duration: 02:34 mins)](https://www.youtube.com/watch?v=7_lH-jFB0Cg)
-  - [Logs](Assignment-13-2/train.txt)
+  - [Logs](https://github.com/tusharkanta/EVA-S13-YoloV3.0/blob/master/train.log)
   
   
   

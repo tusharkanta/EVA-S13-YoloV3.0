@@ -60,7 +60,7 @@ Training Custom Dataset on Colab for YoloV3
 
 - Team members are mentioned at the top
 
-- Assignment has been executed on a local machine and colab is not used.
+- Assignment has been executed on a local GPU machine and colab is not used.
 
 - We took object detection of cartoon character '**Tom**' from Tom and Jerry tales
 

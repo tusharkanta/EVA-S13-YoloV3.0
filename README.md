@@ -1,78 +1,115 @@
-# YoloV3
-________
-YoloV3 Simplified for training on Colab with custom dataset. 
+# EVA4 Assignment 13 - Praveen Raghuvanshi
 
-_A Collage of Training images_
-![image](https://github.com/theschoolofai/YoloV3/blob/master/output/train.png)
+**Team Members**
 
+- Tusharkant Biswal (Tusharkanta_biswal@stragure.com) 
+- V N G Suman Kanukollu (sumankanukollu@gmail.com)
+- Harsha Vardhan (harshavardhan.ma@gmail.com)
+- Praveen Raghuvanshi (praveenraghuvanshi@gmail.com)
 
-We have added a very 'smal' Coco sample imageset in the folder called smalcoco. This is to make sure you can run it without issues on Colab.
+[Github Directory - Assignment -13](https://github.com/praveenraghuvanshi1512/EVA4/tree/Session-13/Session-13/Assignment-13)
 
-Full credit goes to [this](https://github.com/ultralytics/yolov3), and if you are looking for much more detailed explainiation and features, please refer to the original [source](https://github.com/ultralytics/yolov3). 
+### Assignment 13-1
 
-You'll need to download the weights from the original source. 
-1. Create a folder called weights in the root (YoloV3) folder
-2. Download from: https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0
-3. Place 'yolov3-spp-ultralytics.pt' file in the weights folder:
-  * to save time, move the file from the above link to your GDrive
-  * then drag and drop from your GDrive opened in Colab to weights folder
-4. run this command
-`python train.py --data data/smalcoco/smalcoco.data --batch 10 --cache --epochs 25 --nosave`
+OpenCV Yolo: [SOURCE (https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/)
 
-For custom dataset:
-1. Clone this repo: https://github.com/miki998/YoloV3_Annotation_Tool
-2. Follow the installation steps as mentioned in the repo. 
-3. For the assignment, download 500 images of your unique object. 
-4. Annotate the images using the Annotation tool. 
-```
-data
-  --customdata
-    --images/
-      --img001.jpg
-      --img002.jpg
-      --...
-    --labels/
-      --img001.txt
-      --img002.txt
-      --...
-    custom.data #data file
-    custom.names #your class names
-    custom.txt #list of name of the images you want your network to be trained on. Currently we are using same file for test/train
-```
-5. As you can see above you need to create **custom.data** file. For 1 class example, your file will look like this:
-```
-  classes=1
-  train=data/customdata/custom.txt
-  test=data/customdata/custom.txt 
-  names=data/customdata/custom.names
-```
-6. As you it a poor idea to keep test and train data same, but the point of this repo is to get you up and running with YoloV3 asap. You'll probably do a mistake in writing to custom.txt file. This is how our file looks like (please note the .s and /s):
-```
-./data/customdata/images/img001.jpg
-./data/customdata/images/img002.jpg
-./data/customdata/images/img003.jpg
-...
-```
-7. You need to add custom.names file as you can see above. For our example, we downloaded images of Walle. Our custom.names file look like this:
-```
-walle
-```
-8. Walle above will have a class index of 0. 
-9. For COCO's 80 classes, VOLOv3's output vector has 255 dimensions ( (4+1+80)*3). Now we have 1 class, so we would need to change it's architecture.
-10. Copy the contents of 'yolov3-spp.cfg' file to a new file called 'yolov3-custom.cfg' file in the data/cfg folder. 
-11. Search for 'filters=255' (you should get entries entries). Change 255 to 18 = (4+1+1)*3
-12. Search for 'classes=80' and change all three entries to 'classes=1'
-13. Since you are lazy (probably), you'll be working with very few samples. In such a case it is a good idea to change:
-  * burn_in to 100
-  * max_batches to 5000
-  * steps to 4000,4500
-14. Don't forget to perform the weight file steps mentioned in the sectio above. 
-15. Run this command `python train.py --data data/customdata/custom.data --batch 10 --cache --cfg cfg/yolov3-custom.cfg --epochs 3 --nosave`
+1. Run this above code on your laptop or Colab. 
+2. Take an image of yourself, holding another object which is there in COCO data set (search for COCO classes to learn). 
+3. Run this image through the code above. 
+4. Upload the link to GitHub implementation of this
+5. Upload the annotated image by YOLO. 
 
-As you can see in the collage image above, a lot is going on, and if you are creating a set of say 500 images, you'd get a bonanza of images via default augmentations being performed. 
+#### Solution
+
+- [Github Directory - Assignment-13-1](https://github.com/praveenraghuvanshi1512/EVA4/tree/Session-13/Session-13/Assignment-13/Assignment-13-1)
+
+- [Notebook - EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb](https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb)
+
+- Original Image
+
+  <img src=".\Assignment-13-1\praveen-cup.jpg" alt="Original Image - Praveen with Cup in hand" style="zoom:60%;" />
+
+- Objects Detected in Image
+
+  <img src=".\Assignment-13-1\praveen-cup-predicted.jpg" alt="Object Detected - Person and Cake" style="zoom:100%;" />
+
+- **Submission**
+
+  - Upload the link to GitHub implementation of this : https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/EVA-4-S13-A13-1-Praveen-raghuvanshi.ipynb
+
+  - Upload the annotated image by YOLO : https://github.com/praveenraghuvanshi1512/EVA4/blob/Session-13/Session-13/Assignment-13/Assignment-13-1/praveen-cup-predicted.png
 
 
-**Results**
-After training for 300 Epochs, results look awesome!
 
-![image](https://github.com/theschoolofai/YoloV3/blob/master/output/download.jpeg)
+### Assignment-13-2
+
+Training Custom Dataset on Colab for YoloV3
+
+1. Refer to this Colab File: [LINK ](https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
+2. Refer to this GitHub [Repo](https://github.com/theschoolofai/YoloV3)
+3. Collect a dataset of 500 images and annotate them. **Please select a class for which you can find a YouTube video as well.** Steps are explained in the readme.md file on GitHub.
+4. Once done:
+   1. [Download ](https://www.y2mate.com/en19) a very small (~10-30sec) video from youtube which shows your class. 
+   2. Use [ffmpeg](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence) to extract frames from the video. 
+   3. Upload on your drive (alternatively you could be doing all of this on your drive to save upload time)
+   4. Inter on these images using detect.py file. **Modify** detect.py file if your file names do not match the ones mentioned on GitHub. 
+      `python detect.py --conf-thres 0.3 --output output_folder_name`
+   5. Use [ffmpeg](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence) to convert the files in your output folder to video
+   6. Upload the video to YouTube. 
+5. Share the link to your GitHub project with the steps as mentioned above
+6. Share the link of your YouTube video
+7. Share the link of your YouTube video on LinkedIn, Instagram, etc! You have no idea how much you'd love people complimenting you! 
+
+#### Solution
+
+- This assignment is done as a GROUP and has same submission by all team members. 
+
+- Team members are mentioned at the top
+
+- Assignment has been executed on a local machine and colab is not used.
+
+- We took object detection of cartoon character '**Tom**' from Tom and Jerry tales
+
+- Extracted frames from video for dataset
+
+- Manually annotated 1466 images covering whole body of character '**Tom**'
+
+- Epochs: 300 
+
+- Training Time: 07.541 hours
+
+- Classes : 1 - **tom**
+
+- Steps
+  - Made changes to the cfg file
+    - Search for 'filters=255' (you should get entries entries). Change 255 to 18 = (4+1+1)*3
+    - Search for 'classes=80' and change all three entries to 'classes=1'
+    - burn_in to 100
+    - max_batches to 5000
+    - steps to 4000,4500
+  - custom.names had only 'tom' as class.
+  - custom.txt has path to all images
+  - Trained model for 300 epochs 
+  - Ran detect.py to generate frames for predicted bounding boxes
+  - Tested model with last.pt file generated on new video and uploaded it to Youtube.
+  
+- Resources
+  - Dataset
+    - [Images](Assignment-13-2/dataset/fulldataset/images)
+    - [Labels](Assignment-13-2/dataset/fulldataset/labels)
+  - Custom YoloV3 code repository
+  - Sample True Bounding Box
+  - Sample Predicted Bounding Box
+  - [Youtube Video (Duration: 02:34 mins)](https://www.youtube.com/watch?v=7_lH-jFB0Cg)
+  - [Logs](Assignment-13-2/train.txt)
+  
+  
+  
+- Submission
+  - Share the link to your GitHub project with the steps as mentioned above (for YoloV3 training on Colab)
+    - 
+  - Share the link of your YouTube video (your object annotated by your YoloV3 trained model) - https://www.youtube.com/watch?v=7_lH-jFB0Cg
+  
+- Credits:
+
+  - [The School of AI (YoloV3)](https://github.com/theschoolofai/YoloV3)
